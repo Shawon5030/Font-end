@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+header , footer , aside div  , nav, article
+{
+    background-color: antiquewhite;
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+aside .sidebar{
+    grid-area: sidebar;
+}
+aside .Advatiser{
+    grid-area: Advatiser;
+}
+
+footer{
+    grid-area: footer;
+}
+main{
+    display: grid;
+    height: 98vh;
+
+    grid-template-areas:
+        "header header header header"
+        "nav main main  sidebar"
+        "nav main  main Advatiser"
+        "footer footer footer  footer";
+    gap: 10px;
+}
+
+@media screen  and (max-width: 768px) {
+
+    main{
+    display: grid;
+    height: 98vh;
+
+    grid-template-areas:
+        "header "
+        "nav"
+        " main"
+        "Advatiser"
+        "sidebar"
+        "footer ";
+    gap: 10px;
+}
+
+}
+</style>
+<body>
+
+    <main>
+        <header>
+           <h2>The Header</h2>
+        </header>
+        <nav>
+            <li><a href="">Nav1</a></li>
+            <li><a href="">Nav2</a></li>
+            <li><a href="">NAv3</a></li>
+        </nav>
+        <article>
+            <h2>This is a artical</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque ipsum reiciendis aut consectetur commodi dolorum. Assumenda, reprehenderit! Ipsum, molestiae adipisci!</p>
+        </article>
+        <aside>
+            <div class="sidebar">
+                <h1>Sidebar</h1>
+            </div>
+            <div class="Advatiser">
+                <h1>Advatiser</h1>
+            </div>
+        </aside>
+
+        <footer>
+            <h2>footer</h2>        </footer>
+    </main>
+
+</body>
+</html>
